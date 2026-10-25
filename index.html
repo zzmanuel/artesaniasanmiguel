@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo cultural y tienda de artesanías de El Salvador.">
+    <title>Raíces SV | Artesanías salvadoreñas</title>
+    <link rel="stylesheet" href="artesanias.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Navegación principal">
+            <a class="brand" href="#inicio">✺ Raíces SV</a>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Artesanías</a>
+                <a href="#historia">Nuestra cultura</a>
+            </div>
+            <button class="cart-button" id="openCart" type="button" aria-label="Abrir carrito">
+                🛒 Carrito <span id="cartCount">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="eyebrow">Tradición · Identidad · Arte</div>
+        <h1>El arte de nuestras raíces</h1>
+        <p>Descubrí y comprá artesanías que cuentan historias de El Salvador.</p>
+        <a class="button" href="#catalogo">Explorar tienda ↓</a>
+    </section>
+
+    <main>
+        <section id="catalogo" class="catalog-section">
+            <div class="section-heading">
+                <h2>Artesanías con historia</h2>
+                <p>Explorá nuestra colección de artesanías salvadoreñas, cada una con su propia historia y significado cultural.</p>
+            </div>
+
+            <div class="controls" role="group" aria-label="Filtrar por categoría">
+                <button class="filter active" data-category="Todas" aria-pressed="true">Todas</button>
+                <button class="filter" data-category="Cerámica" aria-pressed="false">Cerámica</button>
+                <button class="filter" data-category="Textiles" aria-pressed="false">Textiles</button>
+                <button class="filter" data-category="Madera" aria-pressed="false">Madera</button>
+                <button class="filter" data-category="Fibras naturales" aria-pressed="false">Fibras naturales</button>
+                <button class="filter" data-category="Otros" aria-pressed="false">Otros</button>
+            </div>
+
+            <label class="search-label" for="search">Buscar productos</label>
+            <input id="search" type="search" placeholder="Buscar por producto, categoría o localidad...">
+            <div id="grid" class="grid"></div>
+            <p id="empty" class="empty" hidden>No se encontraron productos con esos filtros.</p>
+        </section>
+
+        <section id="historia" class="story-section">
+            <div class="story">
+                <div>
+                    <span class="tag">Nuestro patrimonio</span>
+                    <h2>Tradiciones que siguen vivas</h2>
+                    <p>Las artesanías salvadoreñas reflejan conocimientos transmitidos entre generaciones. Cada pieza
+                        cuenta una historia sobre su comunidad, sus materiales y la creatividad de quienes la elaboran.
+                    </p>
+                    <p><strong>Acerca de nuestra tienda:</strong> <span id="storeAbout">Escribí aquí la información de
+                            tu emprendimiento.</span></p>
+                </div>
+                <div class="story-icon" aria-hidden="true"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>© <span id="year"></span> Raíces SV · Artesanías de El Salvador</footer>
+
+    <dialog id="productDialog" class="dialog" aria-labelledby="productDialogTitle">
+        <button class="close" id="closeProduct" aria-label="Cerrar" type="button">×</button>
+        <span class="tag" id="dialogCategory"></span>
+        <h2 id="productDialogTitle"></h2>
+        <p id="dialogOrigin" class="origin"></p>
+        <p id="dialogDescription"></p>
+        <p><strong>Dato cultural:</strong> <span id="dialogFact"></span></p>
+        <p class="dialog-price" id="dialogPrice"></p>
+        <button id="dialogAdd" class="button" type="button">Agregar al carrito</button>
+    </dialog>
+
+    <dialog id="cartDialog" class="dialog cart-dialog" aria-labelledby="cartTitle">
+        <button class="close" id="closeCart" aria-label="Cerrar carrito" type="button">×</button>
+        <h2 id="cartTitle">Tu carrito 🛒</h2>
+        <div id="cartItems"></div>
+        <div class="cart-summary">
+            <p>Total: <strong id="cartTotal">$0.00</strong></p>
+            <button id="clearCart" class="button button-secondary" type="button">Vaciar carrito</button>
+            <button id="checkout" class="button" type="button">Realizar pedido por WhatsApp</button>
+        </div>
+    </dialog>
+
+    <script src="artesanias.js"></script>
+</body>
+
+</html>
