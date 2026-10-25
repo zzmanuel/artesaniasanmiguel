@@ -10,7 +10,7 @@ const products = [
     category: "Cerámica",
     origin: "Ilobasco, Cabañas",
     price: 18,
-    image: "imagenes/miniatura colonial.jpg",
+    image: "miniatura colonial.jpg",
     description: "Representación artesanal de una vivienda tradicional, pintada a mano con detalles de la arquitectura salvadoreña.",
     fact: "Ilobasco es reconocida por su tradición ceramista y sus pequeñas figuras conocidas como miniaturas."
   },
@@ -20,7 +20,7 @@ const products = [
     category: "Cerámica",
     origin: "La Campana, La Libertad",
     price: 32,
-    image: "imagenes/valliga.jpg",
+    image: "valliga.jpg",
     description: "Juego de platos y recipiente decorados con motivos vegetales inspirados en la artesanía local.",
     fact: "El barro cocido ha acompañado la vida cotidiana salvadoreña desde tiempos precolombinos."
   },
@@ -30,7 +30,7 @@ const products = [
     category: "Textiles",
     origin: "Nahuizalco, Sonsonate",
     price: 28,
-    image: "imagenes/manta tejida.jpg",
+    image: "manta tejida.jpg",
     description: "Manta suave elaborada en telar con patrones geométricos y tonos inspirados en la naturaleza.",
     fact: "Los telares tradicionales combinan diseños heredados con la creatividad de cada familia artesana."
   },
@@ -40,7 +40,7 @@ const products = [
     category: "Fibras naturales",
     origin: "San Sebastián, San Vicente",
     price: 22,
-    image: "imagenes/bolsa artesanal.jpg",
+    image: "bolsa artesanal.jpg",
     description: "Bolsa resistente tejida a mano, con asas reforzadas y acabados naturales para uso diario.",
     fact: "El tejido en fibras naturales aprovecha materiales renovables y técnicas transmitidas por generaciones."
   },
@@ -50,7 +50,7 @@ const products = [
     category: "Madera",
     origin: "Concepción de Ataco, Ahuachapán",
     price: 45,
-    image: "imagenes/cofre tallado en madera.jpg",
+    image: "Cofre tallado en madera.jpg",
     description: "Cofre decorativo tallado a mano, ideal para guardar recuerdos y pequeños objetos especiales.",
     fact: "Los detalles tallados suelen tomar referencias de la flora, fauna y paisajes de la región."
   },
@@ -60,7 +60,7 @@ const products = [
     category: "Otros",
     origin: "Ilobasco, Cabañas",
     price: 12,
-    image: "imagenes/juguete de madera pintado.jpg",
+    image: "Juguete de madera pintado.jpg",
     description: "Figura infantil pintada a mano con colores alegres y acabados resistentes.",
     fact: "Los juguetes tradicionales de Ilobasco son una expresión lúdica de la cerámica y la cultura local."
   }
@@ -268,7 +268,7 @@ cartItems.addEventListener("click", (event) => {
   const plusButton = event.target.closest("[data-plus]");
   const removeButton = event.target.closest("[data-remove]");
   if (minusButton) changeQuantity(Number(minusButton.dataset.minus), -1);
-  if (plusButton) changeQuantity(Number(plusButton.dataset.plus), 1);
+  if (plusButton) changeQuantity(Number(minusButton.dataset.plus), 1);
   if (removeButton) removeFromCart(Number(removeButton.dataset.remove));
 });
 
