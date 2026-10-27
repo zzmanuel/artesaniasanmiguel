@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "50376889089";
+const WHATSAPP_NUMBER = "50369949386";
 
 const storeAbout =
   "Raíces SV reúne artesanía salvadoreña elaborada por manos locales. Trabajamos para impulsar a los artesanos y preservar las técnicas tradicionales de cada comunidad.";
